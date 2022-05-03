@@ -1,6 +1,6 @@
 [Project]
-filename=Proj10.dev
-name=Projeto1
+filename=Proj11.dev
+name=Projeto2
 Type=1
 Ver=2
 ObjFiles=
@@ -23,7 +23,7 @@ OverrideOutputName=
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
-CommandLine=Arq.csv
+CommandLine=arq.csv
 Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
