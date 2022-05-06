@@ -1,0 +1,5 @@
+C:\inetpub\wwwroot\Linguagem_C\Proj12\Proj12.exe
+arq.dat
+-c
+-a
+-o
