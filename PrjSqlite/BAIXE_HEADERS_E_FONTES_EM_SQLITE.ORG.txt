@@ -1,0 +1,5 @@
+Baixe o pacote amalgamate em:
+
+https://www.sqlite.org/download.html
+
+Não podemos hospedar arquivos de terceiros para não ferir Copyrights.
