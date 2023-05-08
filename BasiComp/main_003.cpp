@@ -3,42 +3,9 @@
 #include <fstream>
 
 using namespace std;
-// Estrutura dos tokens da linguagem
-struct commands {
-	char command[20];
-	char tok;
-	} table[] = {
-		"PRINT", 1,
-		"INPUT", 2,
-		"IF", 3,
-		"THEN", 4,
-		"FOR", 5,
-		"NEXT", 6,
-		"TO", 7,
-		"GOTO", 8,
-		"EOL",9,
-		"FINISHED",10,
-		"GOSUB", 11,
-		"RETURN", 12,
-		"END", 13
-		};
-char SRCFILE[100][100] = {};
-char tmp[100];
-// Left para o tipo char array
-void left(char texto[], int tam, char buffRes[]){
-	int i=0;
-	for(i=0;i<=tam+1;i++) buffRes[i] = '\0';
-	//buffRes = texto;	
-	for(i=0;i<tam;i++) buffRes[i] = texto[i];
-	buffRes[tam] = '\0';
-	}
-// Left para o tipo char pointer	
-void leftChar(char *texto, int tam, char buffRes[]){
-	int i=0;
-	for(i=0;i<=tam;i++) buffRes[i] = '\0';
-	snprintf(buffRes,tam,"%s",texto);
-	}
-	
+
+char OBJFILE[100][100] = {};
+
 void right(char *texto, int tam, char buffRes[]){
 	int i, size;
 	for(i=0;i<=tam;i++) buffRes[i] = '\0';
@@ -73,14 +40,11 @@ int main(int argc, char** argv) {
 		// converte string em char*
 		char *cstr = &a[0];
 		// converte char* em char[]
-		snprintf(SRCFILE[lineTokCnt],sizeof(SRCFILE[lineTokCnt]),"%s",cstr);
+		snprintf(OBJFILE[lineTokCnt],sizeof(OBJFILE[lineTokCnt]),"%s",cstr);
 		lineTokCnt++;
 		}
-	// Escaneamento das linhas do fonte
 	for(int i=0;i<lineTokCnt;i++){
-		//tmp[0] = OBJFILE[i][0];
-		left(SRCFILE[i],3,bufRes);
-		printf("%s %d %s\n", bufRes, i, SRCFILE[i]);
+		printf("%d %s\n",i,OBJFILE[i]);
 		}
 	return 0;
 }
